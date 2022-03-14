@@ -11,7 +11,7 @@ function getRestaurants(){
     $restaurant5 = new Restaurant ("Fabrik", "Sant Magí 84, 07013", "610890621", "Menjar contemporani amb cervesa artesanal i plats generosos.");
 
 
-    $restaurants[] = [$restaurant1,$restaurant2,$restaurant3,$restaurant4,$restaurant5];
+    $restaurants = [$restaurant1,$restaurant2,$restaurant3,$restaurant4,$restaurant5];
 
     return $restaurants;
 }
