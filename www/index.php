@@ -4,6 +4,7 @@
     <?php
         include 'structure/navbar.php';
         include 'structure/footer.php';
+        include 'content/createRestaurants.php';
     ?> 
 
     <head>
@@ -15,7 +16,7 @@
 
         <?php navbar()?>
 
-        <div class = "d-flex mx-lg-5">
+        <!-- <div class = "d-flex mx-lg-5">
             <h3 style = "color: lightgray; text-align:center; padding-top: 75px; padding-bottom: 10px;">Restaurant Reviews</h3>            
             
             <div class = "card">
@@ -27,6 +28,12 @@
                     <p>Adreça d'exemple</p>
                 </div>
             </div>
+        </div> -->
+
+        <div style = "margin-top:30px">
+
+        <?php Restaurant::getFirstFiveRestaurants(); ?>
+
         </div>
             
         <?php footer(); ?>

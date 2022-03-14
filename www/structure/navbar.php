@@ -9,27 +9,12 @@ function navbar(){ //
                 if($pageName === "index.php"){
                     print(' disabled active ');
                 }
-                print('" href="index.php">All exercises</a>
+                print('" href="index.php">Top 5 Restaurants in Mallorca</a>
                 <a class = "nav-item nav-link text-light'); 
-                if($pageName === "primeNumbers.php"){
+                if($pageName === "restaurants.php"){
                     print(' disabled active ');
-                }
-                print('" href="primeNumbers.php">Prime Numbers</a>
-                <a class = "nav-item nav-link text-light'); 
-                if($pageName === "multiplicationTables.php"){
-                    print(' disabled active ');
-                }
-                print('" href="multiplicationTables.php">Multiplication Tables</a>
-                <a class = "nav-item nav-link text-light'); 
-                if($pageName === "divisors.php"){
-                    print(' disabled active ');
-                }
-                print('" href="divisors.php">Divisors</a>
-                <a class = "nav-item nav-link text-light'); 
-                if($pageName === "numberSpelling.php"){
-                    print(' disabled active ');
-                }
-                print('" href="numberSpelling.php">Number Spelling</a>
+                }                
+                print('" href="numberSpelling.php">All restaurants</a>
             </div>
         </nav>
         '
