@@ -10,7 +10,6 @@ class Restaurant{
         $this->add = $addr;
         $this->phone = $phone;
         $this->desc = $desc;
-
     }
 }
 

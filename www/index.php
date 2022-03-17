@@ -39,7 +39,7 @@
 
         for($i = 0; $i < $length; $i++){
                 print('
-                    <!-- <div class = "d-flex mx-lg-5">
+                    <div class = "d-flex mx-lg-5">
                     <h3 style = "color: lightgray; text-align:center; padding-top: 75px; padding-bottom: 10px;">Restaurant Reviews</h3>            
                     
                     <div class = "card">
@@ -47,12 +47,12 @@
                             <h4>'.$restaurants[$i]->name.'</h4>
                         </div>
                         <div class = "card-body">
-                            <p> '.$restaurants[$i]->desc.' </p>
+                            <p> '.$restaurants[$i]->desc.'</p>
                             <p>'.$restaurants[$i]->phone.'</p>
                             <p>'.$restaurants[$i]->addr.'</p>
                         </div>
                     </div>
-                    </div> -->
+                    </div>
                 ');
         }             
         
