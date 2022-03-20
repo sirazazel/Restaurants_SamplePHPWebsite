@@ -4,11 +4,11 @@ function navbar_top(){
     print(
         '<div class =" bg-dark mx-0">
             <div class = "row">
-                <div class = "col-md-4">
+                <div class = "col-md-1">
                     <img src = "./../resources/logo.png" style="width:100px">
                 </div>
                 <div class = "col-md-8">
-                    <h3 style = "color:whitesmoke"> Restaurants </h3>
+                    <h3 style = "color:whitesmoke; padding-top: 40px"> Restaurants </h3>
                 </div>
             </div>
         </div>'
