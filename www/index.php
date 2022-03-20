@@ -13,35 +13,41 @@
     </head>
     
     <body class="bg-light">
+        
+        <?php navbar_top()?>   
 
         <?php navbar()?>
-        <div style = "margin-top:30px">
-
-        <?php
         
-        $restaurants = getRestaurants();
-        $length = count($restaurants);
+        <div style = "margin-top:30px">
+            <?php
+            
+            $restaurants = getRestaurants();
+            $length = count($restaurants);
 
-        for($i = 0; $i < $length; $i++){
+            for($i = 0; $i < $length; $i++){
                 print('
-                    <div class = "d-flex mx-lg-5 py-3 ">
-                        <img src="'.$restaurants[$i] ->img.'" style="width:300px">
-                        <div class = "card">
+                    <div class = "d-flex py-3">
+                        <div class = "card mx-auto" style="width: 50vw;">
                             <div class = "card-header text-center">
                                 <h4>'.$restaurants[$i]->name.'</h4>
                             </div>
-                            <div class = "card-body">
-                                <p> '.$restaurants[$i]->desc.'</p>
-                                <p>'.$restaurants[$i]->phone.'</p>
-                                <p>'.$restaurants[$i]->addr.'</p>
+                            <div class = "row no-gutters">
+                                <div class="col">
+                                    <img src="'.$restaurants[$i] ->img.'" style="width: 350px;" class="card-img">
+                                </div>
+                                <div class="col">
+                                    <div class = "card-body p-2">
+                                        <p>'.$restaurants[$i]->desc. '</p>
+                                        <p>'.$restaurants[$i]->phone.'</p>
+                                        <p>'.$restaurants[$i]->addr. '</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                ');
-        }             
-        
-        ?>
-
+                    ');
+            }
+            ?>
         </div>
             
         <?php footer(); ?>

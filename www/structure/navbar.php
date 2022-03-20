@@ -1,5 +1,20 @@
 <?php
 
+function navbar_top(){
+    print(
+        '<div class =" bg-dark mx-0">
+            <div class = "row">
+                <div class = "col-md-4">
+                    <img src = "./../resources/logo.png" style="width:100px">
+                </div>
+                <div class = "col-md-8">
+                    <h3 style = "color:whitesmoke"> Restaurants </h3>
+                </div>
+            </div>
+        </div>'
+    );
+}
+
 function navbar(){ //
     $pageName=substr($_SERVER["SCRIPT_NAME"],strrpos($_SERVER["SCRIPT_NAME"],"/")+1); //This.. thing outputs a string of the current page. 
     print(
@@ -9,12 +24,12 @@ function navbar(){ //
                 if($pageName === "index.php"){
                     print(' disabled active ');
                 }
-                print('" href="index.php">Top 5 Restaurants in Mallorca</a>
+                print('" href="index.php">Top 5 of Today</a>
                 <a class = "nav-item nav-link text-light'); 
                 if($pageName === "restaurants.php"){
                     print(' disabled active ');
                 }                
-                print('" href="numberSpelling.php">All restaurants</a>
+                print('" href="catalog.php">All restaurants</a>
             </div>
         </nav>
         '
