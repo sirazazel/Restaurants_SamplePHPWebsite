@@ -5,6 +5,7 @@
         include 'structure/navbar.php';
         include 'structure/footer.php';
         include 'content/getRestaurants.php';
+        include 'restaurantInfo.php'
     ?> 
 
     <head>
@@ -14,40 +15,41 @@
     
     <body class="bg-light">
         
-        <?php navbar_top()?>   
-
         <?php navbar()?>
         
-        <div style = "margin-top:30px">
+        <div style = "margin-top:30px; display: flex; overflow: hidden;">
+
             <?php
             
             $restaurants = getRestaurants();
+
             $length = count($restaurants);
 
             for($i = 0; $i < $length; $i++){
                 print('
-                    <div class = "d-flex py-3">
-                        <div class = "card mx-auto" style="width: 50vw;">
+                <div class="d-flex py-3" style="align-self: center">
+                    <button class = "btn" onClick="restaurantInfo();">
+                        <div class = "card mx-auto" style="width: 40vw;">
                             <div class = "card-header text-center">
                                 <h4>'.$restaurants[$i]->name.'</h4>
                             </div>
                             <div class = "row no-gutters">
                                 <div class="col">
-                                    <img src="'.$restaurants[$i] ->img.'" style="width: 350px;" class="card-img">
+                                    <img src="'.$restaurants[$i] ->img.'" style="width: 350px; padding: 1%" class="card-img">
                                 </div>
                                 <div class="col">
                                     <div class = "card-body p-2">
-                                        <p>'.$restaurants[$i]->desc. '</p>
-                                        <p>'.$restaurants[$i]->phone.'</p>
-                                        <p>'.$restaurants[$i]->addr. '</p>
+                                        <p style = "text-align: justify; padding: 1%; margin-right: 10px">'.$restaurants[$i]->desc. '</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </button>
+                </div>
                     ');
             }
             ?>
+
         </div>
             
         <?php footer(); ?>

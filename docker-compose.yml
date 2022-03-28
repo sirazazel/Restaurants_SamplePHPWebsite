@@ -1,8 +1,47 @@
 version: "3.1"
+
+networks:
+  restaurantsnetwork:
+
 services:
     www:
-        image: php:8.0.0-apache
+        build: .
         ports: 
             - "80:80"
         volumes:
             - ./www:/var/www/html
+        links:
+            - db
+        networks:
+            - restaurantsnetwork
+    db:
+        image: mysql:8.0
+        ports:
+            - "3306:3306"
+        command: --default-authentication-plugin=mysql_native_password
+        environment:
+            MYSQL_DATABASE: restaurantsdb
+            MYSQL_USER: sirazazel
+            MYSQL_PASSWORD: passwd
+            MYSQL_ROOT_PASSWORD: passwd123 
+        volumes:
+            - ./dump:/docker-entrypoint-initdb.d
+            - ./conf:/etc/mysql/conf.d
+            - persistent:/var/lib/mysql
+        networks:
+            - restaurantsnetwork
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin
+        links: 
+            - db:db
+        ports:
+            - 8000:80
+        environment:
+            MYSQL_USER: sirazazel
+            MYSQL_PASSWORD: passwd
+            MYSQL_ROOT_PASSWORD: passwd123 
+        networks:
+            - restaurantsnetwork
+
+volumes:
+  persistent:
