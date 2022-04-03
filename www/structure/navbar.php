@@ -17,7 +17,7 @@ function navbar() {
                     <div class = "collapse navbar-collapse ">
                         <div class = "d-flex align-content-start flex-column">
                             <a class = "mx-5 nav-item nav-link text-light ');
-                                if($pageName === "index.php"){print(' disabled active ');} print('" href="index.php">Top 5 of Today
+                                if($pageName === "index.php"){print(' disabled active ');} print('" href="index.php">Today\'s recommendations
                             </a>
                         </div>
                         <div class = "d-flex align-content-end flex-column">
