@@ -17,10 +17,8 @@
         
         <?php navbar()?>
 
-        <?php 
-        $i = $_GET["restid"];
-        $restaurant = getRestaurant($i); 
-        ?>
+        <?php //Setting up object Restaurant from which we'll withdraw our information ?>
+        <?php $i = $_GET["restid"]; $restaurant = getRestaurant($i); ?>
 
         <div class="p-3">
             <div class = "row">
@@ -41,9 +39,6 @@
                 </div>
             </div>
         </div>
-
-    
-
 
         <?php footer(); ?>
 

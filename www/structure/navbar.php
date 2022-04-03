@@ -13,14 +13,18 @@ function navbar() {
                 </div>
             </div>
             <div class = "row">
-                <nav class = "navbar nav-pills  navbar-expand-lg navbar-dark p-2 sticky-top bg-dark">
-                    <div class = "collapse navbar-collapse">
-                        <a class = "navbar-brand mx-5');
-                            if($pageName === "index.php"){print(' disabled active ');} print('" href="index.php">Top 5 of Today
-                        </a>
-                        <a class = "nav-item nav-link text-light'); 
-                            if($pageName === "restaurants.php"){ print(' disabled active ');}print('" href="catalog.php">All restaurants
-                        </a>
+                <nav class = "navbar nav-pills  navbar-expand-lg navbar-dark p-2 sticky-top bg-dark" style="overflow: hidden;">
+                    <div class = "collapse navbar-collapse ">
+                        <div class = "d-flex align-content-start flex-column">
+                            <a class = "mx-5 nav-item nav-link text-light ');
+                                if($pageName === "index.php"){print(' disabled active ');} print('" href="index.php">Top 5 of Today
+                            </a>
+                        </div>
+                        <div class = "d-flex align-content-end flex-column">
+                            <a class = "nav-item nav-link text-light mr-auto'); 
+                                if($pageName === "login.php"){ print(' disabled active ');}print('" href="login.php">Login
+                            </a>
+                        </div>
                     </div>
                 </nav>
             </div>
