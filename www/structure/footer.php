@@ -11,7 +11,7 @@ function footer(){
                             <p class="text-muted">2n ASIX Dual</p>
                         </div>
                         <div class="col-sm-3">
-                            <a class="link-secondary text-right" href="https://github.com/cifpfbmoll/Task1_MutFrancesc">Check my GitHub repository!</a>
+                            <a class="link-secondary text-right" href="https://github.com/cifpfbmoll/Restaurants_MutFrancesc">Check my GitHub repository!</a>
                         </div>
                     </div>
                 </div>

@@ -16,7 +16,7 @@
     <body class="bg-light">
         
         <?php navbar()?>
-        
+        <div style = "margin: 0% 15vw;">
         <?php
         
         $restaurants = getRestaurants();
@@ -24,18 +24,18 @@
         
         for($i = 0; $i < $length; $i++){
             print('
-            <div class="card p-3">
+            <div class="card m-3 p-2">
                 <div class = "row">
                     <div class = "col-sm-2">
                         <img src="'.$restaurants[$i] ->img.'" class="card-img">
                         <a href="restaurantInfo.php?restid='.$i.'" class="stretched-link"></a>
                     </div>
                     <div class = "col">
-                        <div class = "card-title">
+                        <div class = "card-title text-center">
                             <h4>'.$restaurants[$i]->name.'</h4>
                         </div>
                         <div class = "card-body">
-                            <p class="card-text" style = "text-align: justify; padding: 1%;">'.$restaurants[$i]->desc. '</p>
+                            <p class="card-text" style = "text-align: justify;">'.$restaurants[$i]->desc. '</p>
                         </div>
                     </div>
                 </div>
@@ -43,7 +43,7 @@
                 ');
         }
         ?>            
-
+        </div>
         <?php footer(); ?>
 
     </body>
