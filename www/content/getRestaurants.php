@@ -27,12 +27,26 @@ $selectAllRestaurants = "SELECT * FROM restaurant";
 if($restaurantsTable = $database->query($selectAllRestaurants)) {
     while ($restaurantRow = $restaurantsTable->fetch_object()){
         //All fields of a row of data are formatted into an object of my class Restaurant and then stored into an array.
-        $restaurantObject = new Restaurant ($restaurantRow->name,$restaurantRow->address,$restaurantRow->phone, $restaurantRow->description, $restaurantRow->picture);
-        $allRestaurants[] = $restaurantObject;
+        $allRestaurants[] = new Restaurant ($restaurantRow->name,$restaurantRow->address,$restaurantRow->phone, $restaurantRow->description, $restaurantRow->picture);
     }
 }
 
 return $allRestaurants;
 
+}
+
+function getRestaurant($i){
+
+$id = $i +1 ;
+$database = getConnection();
+$selectRestaurants = "SELECT * FROM restaurant WHERE id = $id";
+
+if($restaurantsTable = $database->query($selectRestaurants)) {
+    while ($restaurantRow = $restaurantsTable->fetch_object()){
+        $restaurant = new Restaurant ($restaurantRow->name,$restaurantRow->address,$restaurantRow->phone, $restaurantRow->description, $restaurantRow->picture);
+    }
+}
+
+return $restaurant;
 }
 ?>

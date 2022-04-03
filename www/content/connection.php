@@ -1,11 +1,6 @@
 <?php
 
 function getConnection(){
-
-    //why??
-
-    $connection = new mysqli("db", "sirazazel", "passwd", "restaurantsdb");
-    return $connection;
+    return new mysqli("db", "sirazazel", "passwd", "restaurantsdb");
 }
-
 ?>
