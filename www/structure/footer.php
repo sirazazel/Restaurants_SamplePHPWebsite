@@ -2,8 +2,8 @@
 
 function footer(){
     print('
-            <footer class="footer">
-                <div class="container mb-0">
+            <footer class="footer sticky-bottom">
+                <div class="container">
                     <div class="row">
                         <div class="col">
                             <p class="text-muted">Francesc Mut Mollà</p>

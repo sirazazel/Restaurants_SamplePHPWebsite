@@ -16,36 +16,27 @@
     <body class="bg-light">
         
         <?php navbar()?>
-        <div class = "card-group" style = "margin: 0% 15vw;">
-        <?php
-        
-        $restaurants = getRestaurants();
-        $length = count($restaurants);
-        
-        for($i = 0; $i < $length; $i++){
-            print('
-            <div class="card m-3 p-2">
-                <div class = "row">
-                    <img src="'.$restaurants[$i] ->img.'" class="card-img-top">
-                    <a href="restaurantInfo.php?restid='.$i.'" class="stretched-link"></a>
-                </div>
-                <div class = "row">
-                    <div class = "card-title text-center">
+        <div class = "d-flex justify-content-center" style="height:100%">
+            <?php
+            
+            $restaurants = getRestaurants();
+            $length = count($restaurants);
+            
+            for($i = 0; $i < $length; $i++){
+                print('
+                <div class="card m-3 border border-dark">
+                    <img src="'.$restaurants[$i] ->img.'" class="card-img" style = "width: 250px; filter: blur(2px);">
+                    <a href="restaurantInfo.php?restid='.$restaurants[$i]->id.'" class="stretched-link"></a>
+                    <div class = "card-img-overlay text-center align-self-center" style = "color:whitesmoke">
                         <h4>'.$restaurants[$i]->name.'</h4>
-                    </div>
-                </div>               
-                <div class = "row">
-                    <div class = "card-body">
-                        <p class="card-text" style = "text-align: justify;">'.$restaurants[$i]->addr. '</p>
-                    </div>
-                </div>               
-            </div>
-                ');
-        }
-        ?>            
+                    </div>          
+                </div>
+                    ');
+            }
+            ?>       
         </div>
-        <?php footer(); ?>
 
+        <?php footer()?>
     </body>
     
 </html>

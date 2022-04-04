@@ -28,7 +28,7 @@ function getRestaurants(){
     if($restaurantsTable = $database->query($selectAllRestaurants)) {
         while ($restaurantRow = $restaurantsTable->fetch_object()){
             //All fields of a row of data are formatted into an object of my class Restaurant and then stored into an array.
-            $allRestaurants[] = new Restaurant ($restaurantRow->name,$restaurantRow->address,$restaurantRow->phone, $restaurantRow->description, $restaurantRow->picture);
+            $allRestaurants[] = new Restaurant ($restaurantRow->id, $restaurantRow->name,$restaurantRow->address,$restaurantRow->phone, $restaurantRow->description, $restaurantRow->picture);
         }
     }
 
@@ -38,16 +38,15 @@ function getRestaurants(){
 
 // Getting a single restaurant passed as attribute. 
 
-function getRestaurant($i){
-    // Database IDs start from 1, for indexes start from 0.
-    $id = $i +1 ;
+function getRestaurant($id){
+
     $database = getConnection();
     $selectRestaurants = "SELECT * FROM restaurant WHERE id = $id";
     
     // If our query returns rows of data...
     if($restaurantsTable = $database->query($selectRestaurants)) {
         while ($restaurantRow = $restaurantsTable->fetch_object()){
-            $restaurant = new Restaurant ($restaurantRow->name,$restaurantRow->address,$restaurantRow->phone, $restaurantRow->description, $restaurantRow->picture);
+            $restaurant = new Restaurant ($restaurantRow->id, $restaurantRow->name,$restaurantRow->address,$restaurantRow->phone, $restaurantRow->description, $restaurantRow->picture);
         }
     }
 
