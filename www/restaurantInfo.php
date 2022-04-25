@@ -13,14 +13,14 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     </head>
     
-    <body class="bg-light">
+    <body class="bg-light containter">
         
         <?php navbar()?>
 
         <?php //Setting up object Restaurant from which we'll withdraw our information ?>
-        <?php $i = $_GET["restid"]; $restaurant = getRestaurant($i); ?>
+        <?php $id = $_GET["restid"]; $restaurant = getRestaurant($id); ?>
 
-        <div class="p-3">
+        <div class="p-3 mx-auto">
             <div class = "row">
                 <div class = "col-sm-2">
                     <img src=<?php print($restaurant->img) ?> class="card-img">
@@ -42,6 +42,7 @@
 
         <?php footer(); ?>
 
+        
     </body>
     
 </html>

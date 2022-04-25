@@ -1,4 +1,7 @@
+<?php session_start();?>
+
 <!DOCTYPE html>
+
 <html>
 
     <?php
@@ -35,6 +38,7 @@
             }
             ?>       
         </div>
+
 
         <?php footer()?>
     </body>
