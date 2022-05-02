@@ -8,7 +8,8 @@
         include 'structure/navbar.php';
         include 'structure/footer.php';
         include 'content/getRestaurants.php';
-    ?> 
+        include 'structure/login.php';
+    ?>
 
     <head>
         <title>Espardenya's Testing Area</title>
@@ -38,7 +39,6 @@
             }
             ?>       
         </div>
-
 
         <?php footer()?>
     </body>
