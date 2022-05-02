@@ -27,7 +27,7 @@ services:
         volumes:
             - ./dump:/docker-entrypoint-initdb.d
             - ./conf:/etc/mysql/conf.d
-            - persistent:/var/lib/mysql
+            - ./data:/var/lib/mysql
         networks:
             - restaurantsnetwork
     phpmyadmin:
@@ -42,6 +42,3 @@ services:
             MYSQL_ROOT_PASSWORD: passwd123 
         networks:
             - restaurantsnetwork
-
-volumes:
-  persistent:

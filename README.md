@@ -74,8 +74,8 @@ Then, it tells Debian to update and sync packages. Here we could install all dep
 As we only have a single container, it would be enough to run a docker run command to create and deploy our webserver.
 
 ```bash
-$ docker build -t sirazazel/Webserver:1.0 .
-$ docker run --name Webserver \
+$ docker build -t sirazazel/webserver:1.0 .
+$ docker run --name webserver \
   -p 80:80 \
   -w /var/www/html -v "$(pwd)/www:/var/www/html" \
   -d sirazazel/webserver:1.0 

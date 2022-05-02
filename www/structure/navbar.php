@@ -1,5 +1,4 @@
 <?php
-
 function navbar() {
     $pageName = getCurrentPageName();
     print('
@@ -20,18 +19,26 @@ function navbar() {
                 </a>
             </div>
             <div class = "flex-column">');
-                if (isset($_SESSION['id']) && isset($_SESSION['username'])){
+                if (isset($_SESSION['user_id'])){
                     print('
-                    <p>Hello, </p>
-                    <a class = "mx-5 nav-item nav-link text-light mr-auto href="structure/logout.php">Log out</a>
+                    <p class = "mx-5 text-light mr-auto" >Hello, '.$_SESSION['email'].'</p>
                     ');
                 } else {
                     print('
-                    <p>Hello, </p>
-                    <a class = "mx-5 nav-item nav-link text-light mr-auto href="structure/login.php">Log in</a>
+                    <p class = "mx-5 text-light mr-auto" >Hello, guest</p>
                     ');
                 }
             print('
+            <div class = "flex-column">');
+                if (isset($_SESSION['username'])){
+                    print('
+                    <a class = "mx-5 nav-item nav-link text-light mr-auto" href="structure/logout.php">Log out</a>
+                    ');
+                }
+            print('
+                </a>
+            </div>
+       
                 </a>
             </div>
         </nav>

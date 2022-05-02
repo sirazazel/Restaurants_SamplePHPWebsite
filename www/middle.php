@@ -13,7 +13,11 @@
     
     <body class="bg-light">
         
-        <?php login(); ?>
+        <?php 
+        login(); 
+        ?>
+
+        <a href="index.php"> Index </a>
         
     </body>
     
