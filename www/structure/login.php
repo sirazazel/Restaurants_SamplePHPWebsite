@@ -17,6 +17,7 @@ function login(){
 
       $sql = ('SELECT * FROM Users WHERE USERNAME="'.$username.'";');
 
+      //Querying the database for a matching username and veryfying passphrase.
       if($userTable = $database->query($sql)) {
          if($userTable->num_rows>0){
 
@@ -25,8 +26,9 @@ function login(){
             $token = hash('md5', $password);
 
             if ($token == $pwh) {
-
+               //Storing the session ID and email.
                $_SESSION['user_id'] = $user->username;
+               $_SESSION['name'] = $user->name;
                $_SESSION['email'] = $user->email;
                redirect();
 
@@ -44,7 +46,7 @@ function login(){
 
 
 function redirect(){
-
+   //This should redirect the page, eventually.
 }
 
 function show_error(){

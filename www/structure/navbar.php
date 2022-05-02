@@ -21,7 +21,8 @@ function navbar() {
             <div class = "flex-column">');
                 if (isset($_SESSION['user_id'])){
                     print('
-                    <p class = "mx-5 text-light mr-auto" >Hello, '.$_SESSION['email'].'</p>
+                    <h4 class = "mx-5 text-light mr-auto" >Hello, '.$_SESSION['user_id'].'</h4>
+                    <p class = "mx-5 text-light mr-auto" >'.$_SESSION['email'].'</p>
                     ');
                 } else {
                     print('
@@ -29,16 +30,6 @@ function navbar() {
                     ');
                 }
             print('
-            <div class = "flex-column">');
-                if (isset($_SESSION['username'])){
-                    print('
-                    <a class = "mx-5 nav-item nav-link text-light mr-auto" href="structure/logout.php">Log out</a>
-                    ');
-                }
-            print('
-                </a>
-            </div>
-       
                 </a>
             </div>
         </nav>
