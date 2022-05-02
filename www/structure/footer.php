@@ -13,11 +13,11 @@ function footer(){
                         </div>
                         <div class="col-sm-3">
                             <div class="d-flex mx-lg-5 text-light">
-                                <form action="./structure/login.php" method="post">
+                                <form action="./../middle.php" method="post">
                                     <label for="username">Username:</label><br>
-                                        <input type="text" id="username" name="username"><br>
+                                            <input type="text" id="username" name="username"><br>
                                     <label for="password">Password:</label><br>
-                                        <input type="password" id="password" name="password"><br><br>
+                                            <input type="password" id="password" name="password"><br><br>
                                     <input type="submit" value="Log in">
                                     <input type="reset">
                                 </form>

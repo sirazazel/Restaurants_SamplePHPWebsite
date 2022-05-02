@@ -1,9 +1,5 @@
 <?php
 
-print_r ($_SESSION);
-
-include 'login.php';
-
 function navbar() {
     $pageName = getCurrentPageName();
     print('
@@ -28,6 +24,11 @@ function navbar() {
                     print('
                     <p>Hello, </p>
                     <a class = "mx-5 nav-item nav-link text-light mr-auto href="structure/logout.php">Log out</a>
+                    ');
+                } else {
+                    print('
+                    <p>Hello, </p>
+                    <a class = "mx-5 nav-item nav-link text-light mr-auto href="structure/login.php">Log in</a>
                     ');
                 }
             print('
