@@ -3,13 +3,9 @@ function navbar() {
     $pageName = getCurrentPageName();
     print('
         <header class = "bg-dark d-flex">
-            <div class = "row">
-                <div class = "col">
-                    <img src = "./../resources/logo.png" style="width:75px">
-                </div>
-                <div class = "col align-self-center">
-                    <h3 style = "margin: 1vw; color:whitesmoke;"> Restaurants </h3>
-                </div>
+            <img src = "./../resources/logo.png" style="width:100px; float: none; text-align:center;">
+            <div class ="mx-auto">
+                <h3 style = "color:whitesmoke;"> Restaurant Guide </h3>
             </div>
         </header>
         <nav class = "navbar sticky-top bg-dark">
