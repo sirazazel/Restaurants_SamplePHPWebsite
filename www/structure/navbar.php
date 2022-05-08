@@ -4,7 +4,7 @@ function navbar() {
     print('
         <header class = "bg-dark d-flex">
             <img src = "./../resources/logo.png" style="width:100px; float: none; text-align:center;">
-            <div class ="mx-auto">
+            <div class ="mx-auto my-4">
                 <h3 style = "color:whitesmoke;"> Restaurant Guide </h3>
             </div>
         </header>
