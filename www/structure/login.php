@@ -3,8 +3,6 @@ include_once 'content/connection.php';
 function login(){ 
    //Database connection   
    $database = getConnection();
-   //Checking if form POST variables are set
-   if (isset($_POST['username']) and isset($_POST['password'])){
       //Getting the username and passwd from the form
       $username = $_POST['username'];
       $password = $_POST['password'];
@@ -30,7 +28,6 @@ function login(){
                $_SESSION['user_id'] = $user->username;
                $_SESSION['name'] = $user->name;
                $_SESSION['email'] = $user->email;
-               redirect();
 
             }  else {
                print ("Incorrect password");
@@ -42,12 +39,8 @@ function login(){
          show_error();
       }
    }
-}
 
 
-function redirect(){
-   //This should redirect the page, eventually.
-}
 
 function show_error(){
    print("Internal error");

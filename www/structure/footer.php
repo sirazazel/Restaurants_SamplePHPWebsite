@@ -1,8 +1,9 @@
 <?php
 
+
 function footer(){
     print('
-            <footer class="footer sticky-bottom">
+            <footer class="footer navbar-fixed-bottom">
                 <div class="container">
                     <div class="row">
                         <div class="col">
@@ -16,11 +17,11 @@ function footer(){
                                 <div class = "flex-column">');
                                     if (isset($_SESSION['user_id'])){
                                         print('
-                                        <a class = "mx-5 nav-item nav-link text-light mr-auto" href="structure/logout.php">Log out</a>
+                                        <a class = "mx-5 nav-item nav-link text-dark mr-auto" href="structure/logout.php">Log out</a>
                                         ');
                                     } else {
                                         print('
-                                        <form action="./../middle.php" method="post">
+                                        <form action="./../index.php" method="post">
                                             <label for="username">Username:</label><br>
                                                     <input type="text" id="username" name="username"><br>
                                             <label for="password">Password:</label><br>
