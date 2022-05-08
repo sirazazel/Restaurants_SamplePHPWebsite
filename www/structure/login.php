@@ -30,22 +30,15 @@ function login(){
                $_SESSION['email'] = $user->email;
 
             }  else {
-               print ("Incorrect password");
+               print ('<div class="d-flex bg-warning"><p class="mx-auto my-auto">Incorrect password.</p></div>');
             }
          } else {
-            print ("Username not found");
+            print ('<div class="d-flex bg-warning"><p class="mx-auto my-auto">Username not found.</p></div>');
          }
       } else {
-         show_error();
+         print ('<div class="d-flex bg-warning"><p class="mx-auto my-auto">Internal error.</p></div>');
       }
    }
-
-
-
-function show_error(){
-   print("Internal error");
-}
-
 ?>
 
 
