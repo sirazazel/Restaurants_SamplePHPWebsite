@@ -10,15 +10,14 @@ function navbar() {
         </header>
         <nav class = "navbar sticky-top bg-dark">
             <div class = "flex-column">
-                <a class = "mx-5 nav-item nav-link text-light ');
+                <a class = "mx-5 nav-item nav-link text-light');
                     if($pageName === "index.php"){print(' disabled active ');} print('" href="index.php">Today\'s recommendations
                 </a>
             </div>
             <div class = "flex-column">');
                 if (isset($_SESSION['user_id'])){
                     print('
-                    <h4 class = "mx-5 text-light mr-auto" >Hello, '.$_SESSION['user_id'].'</h4>
-                    <p class = "mx-5 text-light mr-auto" >'.$_SESSION['email'].'</p>
+                    <p class = "mx-5 text-light mr-auto">Have a nice day, '.$_SESSION['user_id'].'</p>
                     ');
                 } else {
                     print('
